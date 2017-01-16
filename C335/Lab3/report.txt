@@ -1,0 +1,18 @@
+Name: Blake Howard (bahoward)
+Partner: Benjamin Newman (newmanba)
+
+We accomplished extending dump.c to make it print all the formats specified. 
+
+The difficulties started (as they often do) at the beginning figuring out exactly what format characters
+would produce which output. The next difficulty was figuring out how to print certain formats on certain lines.
+The final was seeing how the formatting should be, in order to copy the format given to us in lab. 
+
+Overcoming the formatting characters was easy, we just needed to look them up. The main challenge was making
+the lines print where they needed to be. Ben had a great idea of copying different strings to a variable
+and printing out that variable, and I helped him implement this with if statements containing modulo. The 
+formatting just took a litte time, research, and expirimentation to figure out how to make it look like the 
+lab manual's table. 
+
+I learned a few things from my partner, actually. I didn't know about ternary statements, and I'm glad I know
+what they are and how to use them now. I can already see where they could be useful, and of course I learned
+about different formatting characters and how to format these how I wanted, which is helpful. 

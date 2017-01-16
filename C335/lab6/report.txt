@@ -1,0 +1,19 @@
+Names: Blake Howard (Bahoward), Di Zhong (DiZhong)
+Lab 6
+
+
+1. The cs pin selects which slave to communicate with by lowering the line, and sending a byte.
+2. The CS pin is set high after initialization, because it's telling the slave it's not ready to communicate yet
+	The read and write functions in f3d_gyro.c also set the pin high and low. The pin is set low, which means 
+	information is about to be written or read, and sets the pin high, to let the slave know communication is finished. 
+3. You would connect the devices on the same SCLK, MOSI, and MISO, but they would each have their own slave select line so each 
+	device would know when communication is needed with it. 
+4. The Baud rate prescaler is set to 8, resulting in an SPI clock of 9MHz.
+5. Yes the peripheral devices need to be configured. On-the-fly changes need to be available if different peripherals are running
+	on different speed. 
+
+I found this lab extremely difficult. I really need to learn more about bits and bit shifting. I also know much 
+more about how the initialization process works, and discovered that if things aren't initilized correctly
+that you can effectively brick the board. I had 3 different boards that wouldn't download code anymore. I discovered
+that this was due to incorrect initialization with my user button driver. I fixed it and now it works correctly. 
+
